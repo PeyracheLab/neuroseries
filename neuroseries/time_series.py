@@ -282,7 +282,7 @@ class Tsd(pd.Series):
         ix = ~np.isnan(ix)
         tsd_r = tsd_r[ix]
         if not keep_labels:
-            s = tsd_r.iloc[:, col]
+            s = tsd_r.iloc[:,0]
             return Tsd(s)
         return Tsd(tsd_r, copy=True)
 
